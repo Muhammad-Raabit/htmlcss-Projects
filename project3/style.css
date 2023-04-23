@@ -1,0 +1,281 @@
+body {
+    font-family: 'Roboto', Arial;
+    margin: 0%;
+    padding-top: 90px;
+    padding-left: 90px;
+    padding-right: 25px;
+    background-color: rgb(238, 237, 237);
+}
+
+p {
+    margin-top: 0;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    row-gap: 20px;
+}
+
+
+
+.info-row {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+.thumbnail {
+    width: 100%;
+}
+
+.profile-pic {
+    /* margin-top: 10px; */
+    width: 36px;
+    border-radius: 50px;
+}
+
+.video-auther,
+.stats {
+    font-size: 12px;
+    color: rgb(96, 96, 96);
+}
+
+.video-auther {
+    margin-bottom: 4px;
+}
+
+.thumbnail-row {
+    margin-bottom: 8px;
+    position: relative;
+
+}
+
+.video-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    left: 0%;
+    background-color: white;
+    border-bottom: 1px solid rgb(216, 213, 213);
+    z-index: 999;
+}
+
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0%;
+    bottom: 0%;
+    background-color: white;
+    width: 75px;
+    padding-top: 5px;
+}
+
+.sidebar-link {
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar-link img {
+    height: 25px;
+}
+
+.sidebar-link div {
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+.sidebar-link:hover {
+    background-color: rgb(233, 230, 230);
+
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    height: 25px;
+    margin-left: 24px;
+    margin-right: 24px;
+}
+
+.youtube {
+    height: 20px;
+
+}
+
+.middle-section {
+    flex: 1;
+    margin-left: 55px;
+    margin-right: 20px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 2px;
+    background-color: antiquewhite;
+    border: 1px solid rgb(214, 210, 210);
+    width: 0;
+}
+
+.search-button {
+    padding: 5px 15px;
+    border: none;
+    background-color: antiquewhite;
+    cursor: pointer;
+    margin-right: 20px;
+    border: 1px solid rgb(214, 210, 210);
+}
+
+.search-button,
+.voice-button {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.tooltip {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 2px;
+    bottom: -35px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+
+}
+
+.search-button:hover .tooltip,
+.voice-button:hover .tooltip {
+    opacity: 1;
+}
+
+.upload-container,
+.youtube-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.upload-container:hover .tooltip,
+.youtube-container:hover .tooltip,
+.notification-icon:hover .tooltip {
+    opacity: 1;
+
+}
+
+.search-icon {
+    height: 25px;
+}
+
+.voice-button {
+    background-color: antiquewhite;
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+}
+
+.voice-icon {
+    height: 22px;
+}
+
+.right-section {
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 220px;
+    /* gap: 10px; */
+    /* flex: 1; */
+    /* flex-shrink: 0; */
+}
+
+.notification-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.notification-count {
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    background-color: rgb(188, 5, 5);
+    color: white;
+    border-radius: 25px;
+    padding: 1px 4px;
+    font-size: 11px;
+}
+
+.upload-svg {
+    height: 24px;
+}
+
+.youtube-svg {
+    height: 24px;
+}
+
+.notification-svg {
+    height: 24px;
+}
+
+.chennal-svg {
+    height: 32px;
+    border-radius: 20px;
+}
+
+.video-time {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    position: absolute;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px 4px;
+    bottom: 10px;
+    right: 10px;
+}
+
+
+
+@media only screen and (max-width:680px) {
+   .video-grid{
+    grid-template-columns: 1fr;
+   }
+}
+@media only screen and (min-width:680px) {
+   .video-grid{
+    grid-template-columns: 1fr 1fr;
+   }
+}
+@media only screen and (min-width:900px) {
+   .video-grid{
+    grid-template-columns: 1fr 1fr 1fr;
+   }
+}
