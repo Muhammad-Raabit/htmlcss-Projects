@@ -1,0 +1,259 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background: #efefef;
+}
+
+/* start header css*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1876f2;
+  padding: 5px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header .left-nav,
+.right-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+header .logo {
+  width: 160px;
+  cursor: pointer;
+}
+header .nav-social-icons img {
+  width: 30px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+header .right-nav .search-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #efefef;
+  border-radius: 20px;
+  width: 350px;
+  padding: 0 10px;
+}
+header .right-nav .search-box input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: 0;
+  padding: 8px 5px;
+  color: gray;
+  font-size: 1rem;
+}
+
+header .right-nav .search-box img {
+  width: 20px;
+}
+header .right-nav .nav-user-icon img {
+  width: 2.2em;
+  border: 2px solid #efefef;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.online {
+  position: relative;
+}
+.online::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: 2px solid #fff;
+  background-color: #41db51;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+/* start main content */
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+}
+/*-------------- start .left-sidebar -------------*/
+.container .left-sidebar {
+  flex-basis: 20%;
+  position: sticky;
+  align-self: flex-start;
+  top: 70px;
+}
+
+.container .left-sidebar .imp-links img {
+  width: 20px;
+}
+.container .left-sidebar .shortcut-links img {
+  width: 40px;
+  border-radius: 10px;
+}
+.container .left-sidebar .shortcut-links p {
+  margin: 25px 0;
+  color: #626262;
+  font-weight: 500;
+}
+
+.container .left-sidebar .imp-links a,
+.shortcut-links a {
+  color: #626262;
+  margin-bottom: 30px;
+  text-decoration: none;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.container .left-sidebar .imp-links {
+  border-bottom: 1px solid #ccc;
+}
+.container .left-sidebar .imp-links a:last-child {
+  color: #1876f2;
+}
+
+/*-------------- start right-sidebar -------------*/
+.container .right-sidebar {
+  flex-basis: 30%;
+  position: sticky;
+  align-self: flex-start;
+  top: 70px;
+  padding: 5px;
+  color: #626262;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.right-sidebar .sidebar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 18px; */
+}
+.right-sidebar .sidebar-title h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.right-sidebar .sidebar-title a {
+  text-decoration: none;
+  color: #1876f2;
+  font-size: 14px;
+}
+.right-sidebar .event {
+  display: flex;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.event .left-event {
+  flex-basis: 20%;
+  /* width: 65px; */
+  height: 55px;
+  text-align: center;
+  padding-top: 10px;
+  margin-right: 15px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+.event p {
+  font-size: 14px;
+}
+.event a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #1876f2;
+}
+.right-sidebar .left-event span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #1876f2;
+  color: #fff;
+  width: 100%;
+  padding: 2px 0;
+  font-size: 12px;
+}
+.right-sidebar .sidebar-ads {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.right-sidebar .online-list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.right-sidebar .online-list .online img {
+  width: 35px;
+  border-radius: 50%;
+}
+.right-sidebar .online-list .online {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.right-sidebar .online-list .online::after {
+  top: unset;
+  bottom: 5px;
+}
+
+/*-------------- start main Content -------------*/
+.container .main-content {
+  flex-basis: 47%;
+  position: sticky;
+  align-self: flex-start;
+}
+
+.main-content .story-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.story-gallery .story {
+  flex-basis: 20%;
+  height: 150px;
+  background-image: url("images/status-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  position: relative;
+}
+
+.story img {
+  width: 30px;
+  position: absolute;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+
+.story p {
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.2); 
+   padding: 10px 0;
+}
